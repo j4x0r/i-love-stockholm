@@ -3,12 +3,6 @@ import Expense from "./Expense";
 
 export default class ExpenseList extends React.Component {
 
-  constructor(props) {
-    super(props);
-
-
-  }
-
   render() {
     return (
       <ul className="expense-list">
@@ -25,13 +19,6 @@ export default class ExpenseList extends React.Component {
         </li>
       );
     })
-
   }
 
 };
-
-Expense.childContextTypes = {
-  muiTheme: React.PropTypes.object
-}
-
-

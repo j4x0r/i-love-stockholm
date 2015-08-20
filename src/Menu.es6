@@ -14,12 +14,6 @@ import MenuDivider from 'material-ui/lib/menus/menu-divider';
 
 export default class Menu extends React.Component {
 
-  constructor(props) {
-    super(props);
-
-    this.state = {location: 'guide'};
-  }
-
   getChildContext() {
     return {
       muiTheme: ThemeManager.getCurrentTheme()
@@ -27,13 +21,12 @@ export default class Menu extends React.Component {
   }
 
   navigate(location){
-    this.setState({location: location});
     this.props.onNavigate(location);
   }
 
   className(location){
     return classNames("menu__item", {
-      "is-selected": location == this.state.location
+      "is-selected": location == this.props.location
     });
   }
 
@@ -47,7 +40,7 @@ export default class Menu extends React.Component {
           <FontIcon iconStyle={ {color: "white", fontSize: '32px' }} className="material-icons">favorite</FontIcon>
         </div>
         <div className={ this.className('budget') } onClick={() => this.navigate('budget')}>
-          <FontIcon iconStyle={ {fontSize: '32px' }} className="material-icons">account_circle</FontIcon>
+          <FontIcon iconStyle={ {fontSize: '32px' }} className="material-icons">credit_card</FontIcon>
         </div>
       </div>
     );

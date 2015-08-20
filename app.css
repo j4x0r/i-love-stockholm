@@ -1,4 +1,36 @@
-@import url(http://fonts.googleapis.com/css?family=Merriweather);
+/*@import url(http://fonts.googleapis.com/css?family=Merriweather);*/
+
+body {
+  margin: 0;
+}
+
+html, body, main {
+  height: 100%;
+}
+
+.splash {
+  background: url(http://bdo.se/wp-content/uploads/2014/01/Stockholm1.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  padding: 50px;
+}
+
+.splash__box {
+  background: rgba(0,0,0,0.8);
+  /*background: rgba(255,255,255,0.8);*/
+  margin: auto;
+  text-align: center;
+  max-width: 300px;
+  border-radius: 5px;
+  min-height: 50%;
+}
+
+.splash__box h2 {
+  font-family: Roboto;
+  color: white;
+  font-weight: 300;
+}
 
 .expense-list {
   margin: 0;
@@ -12,10 +44,44 @@
 
 .expense__amount {
   float: right;
-  margin-right: 30px;
-  font-family: 'Merriweather', serif;
+  margin-right: 20px;
+  font-family: 'Roboto';
   font-size: 22px;
-  line-height: 40px;
+  font-weight: 300;
+  line-height: 80px;
+  text-align: left;
+}
+
+.expense__amount small{
+  font-weight: 100;
+  font-size: 10px;
+}
+
+.total {
+  /*background: #c8e6c9;*/
+  /*padding: 30px;*/
+  border-bottom: 1px solid #eee;
+}
+
+.total-title {
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 42px;
+  margin-bottom: 8px;
+  /*text-align: center;*/
+  /*background: rgba(255,255,255,0.5);*/
+  margin-left: 20px;
+}
+
+.total-title small {
+  font-weight: 100;
+}
+
+.left{
+  /*text-align: center;*/
+  font-size: 16px;
+  font-weight: normal;
+  margin-left: 20px;
 }
 
 small {
@@ -48,7 +114,6 @@ small {
   font-feature-settings: 'liga';
 }
 
-
 .menu {
   position: fixed;
   bottom: 0;
@@ -56,9 +121,6 @@ small {
   width: 100%;
 }
 
-body {
-  margin: 0 0 80px 0;
-}
 
 .menu__item {
   width: 33%;
@@ -74,4 +136,63 @@ body {
 
 .menu__item.is-selected .material-icons {
   color: white !important;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.article-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.article-preview {
+  margin: 20px;
+}
+
+.article-preview.is-expanded {
+  margin: 0px;
+}
+
+.article-preview__content {
+  padding: 20px;
+}
+
+.article-preview__image {
+  width: 90%;
+  height: 190px;
+  background-size: 100%;
+  background-position: center center;
+  margin-left: 10%;
+  /*border-bottom: 1px solid #eee;*/
+}
+
+.article-preview__rank {
+  width: 10%;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 22px;
+  height: 170px;
+  border-bottom: 1px solid #eee;
+  float: left;
+  background: #fafafc;
+}
+
+.progress {
+  height: 16px;
+  background: #e3f2fd;
+}
+
+.progress__bar {
+  height: 16px;
+  background: #2196f3;
+  transition: width 1.5s ease-in-out;
+  border-bottom: 1px solid #1565c0;
+}
+
+.upgrade-box {
+  padding: 20px;
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import Budget from "./Budget";
+import Guide from "./Guide";
 import Menu from "./Menu";
+import Splash from "./Splash";
 
 export default class App extends React.Component {
 
@@ -8,9 +10,10 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
-      location: 'guide',
+      splash: true,
+      location: 'budget',
       uid: 14,
-
+      limit: 5000,
       expenses: [
         { id: 1, amount: 273, title: "Nook", subtitle: "Restaurant", avatar: "http://totallystockholm.se/wp-content/uploads/2014/10/nook.jpg" },
         { id: 2, amount: 273, title: "Nook", subtitle: "Restaurant", avatar: "http://totallystockholm.se/wp-content/uploads/2014/10/nook.jpg" },
@@ -41,13 +44,25 @@ export default class App extends React.Component {
   }
 
   render() {
+    //<button onClick={ this.addExpense.bind(this) }>Add expense</button>
     return (
       <main>
-        <button onClick={ this.addExpense.bind(this) }>Add expense</button>
-        { this.renderContent() }
-        <Menu onNavigate={ this.navigate.bind(this) } />
+       { this.state.splash ? <Splash /> : this.app() }
       </main>
     );
+  }
+
+  app() {
+    return (
+      <div>
+        { this.renderContent() }
+        <Menu location={ this.state.location } onNavigate={ this.navigate.bind(this) } /> }
+      </div>
+    );
+  }
+
+  onUpgrade() {
+    this.setState({limit: 10000});
   }
 
   renderContent() {
@@ -55,7 +70,7 @@ export default class App extends React.Component {
       case 'guide':
         return <Guide />
       case 'budget':
-        return <Budget expenses={ this.state.expenses } />
+        return <Budget onUpgrade={ this.onUpgrade.bind(this) } limit={ this.state.limit } expenses={ this.state.expenses } />
       case 'map':
         return null
     };
