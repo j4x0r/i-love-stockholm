@@ -1,0 +1,23 @@
+@import url(http://fonts.googleapis.com/css?family=Slabo+27px|Merriweather);
+
+.expense-list {
+  margin: 0;
+  padding: 0;
+
+}
+
+.expense {
+  margin: 10px;
+}
+
+.expense__amount {
+  float: right;
+  margin-right: 30px;
+  font-family: 'Merriweather', serif;
+  font-size: 22px;
+  line-height: 40px;
+}
+
+small {
+  font-weight: normal;
+}

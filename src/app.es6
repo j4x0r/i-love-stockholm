@@ -1,4 +1,4 @@
 import React from 'react';
-import Test from './Test.es6';
+import ExpenseList from './ExpenseList.es6';
 
-React.render(<Test />, document.body);
+React.render(<ExpenseList />, document.body);
