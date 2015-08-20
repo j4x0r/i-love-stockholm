@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Slabo+27px|Merriweather);
+@import url(http://fonts.googleapis.com/css?family=Merriweather);
 
 .expense-list {
   margin: 0;
@@ -20,4 +20,58 @@
 
 small {
   font-weight: normal;
+  font-size: 0.7em;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 48px;  /* Preferred icon size */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+
+.menu {
+  position: fixed;
+  bottom: 0;
+  background: #eeeef2;
+  width: 100%;
+}
+
+body {
+  margin: 0 0 80px 0;
+}
+
+.menu__item {
+  width: 33%;
+  display: inline-block;
+  text-align: center;
+  padding: 20px 0 10px 0;
+}
+
+.menu__item.is-selected {
+  background: #556;
+
+}
+
+.menu__item.is-selected .material-icons {
+  color: white !important;
 }

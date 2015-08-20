@@ -45,7 +45,7 @@ export default class Expense extends React.Component {
   render() {
     return (
       <Card initiallyExpanded={ this.state.expanded } expandable={true} onClick={ this.expand.bind(this) }>
-        <h1 className="expense__amount">{ this.props.amount } <small>kr</small></h1>
+        <h1 className="expense__amount">{ this.props.amount } <small>SEK</small></h1>
         <CardHeader
           title={ this.props.title }
           subtitle={ this.props.subtitle }

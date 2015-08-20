@@ -1,10 +1,10 @@
 module.exports = {
   entry: {
-    app: ['webpack/hot/dev-server', './src/app.es6']
+    app: ['webpack/hot/dev-server', './src/main.es6']
   },
   output: {
     path: '.',
-    filename: 'app.js'
+    filename: 'main.js'
   },
   resolve: {
     extensions: ['', '.js', '.es6']

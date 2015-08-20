@@ -1,27 +1,25 @@
 import React from 'react';
-import Expense from "./Expense";
+import Article from "./Article";
 
-export default class ExpenseList extends React.Component {
+export default class ArticleList extends React.Component {
 
   constructor(props) {
     super(props);
-
-
   }
 
   render() {
     return (
-      <ul className="expense-list">
+      <ul className="article-list">
         { this.renderList() }
       </ul>
     );
   }
 
   renderList() {
-    return this.props.expenses.map((expense) => {
+    return this.props.articles.map((article) => {
       return (
-        <li key={expense.id} className="expense">
-          <Expense {...expense} />
+        <li key={article.id} className="article-preview">
+          <Article {...article} />
         </li>
       );
     })
