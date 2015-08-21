@@ -33,21 +33,19 @@ export default class Menu extends React.Component {
   render() {
     return (
       <div className="menu">
-        <div className={ this.className('map') } onClick={() => this.navigate('map')}>
+        <a href="#" className={ this.className('map') } onClick={() => this.navigate('map')}>
           <FontIcon iconStyle={ {fontSize: '32px' }} className="material-icons">room</FontIcon>
-        </div>
-        <div className={ this.className('guide') } onClick={() => this.navigate('guide')}>
+        </a>
+        <a href="#" className={ this.className('guide') } onClick={() => this.navigate('guide')}>
           <FontIcon iconStyle={ {color: "white", fontSize: '32px' }} className="material-icons">favorite</FontIcon>
-        </div>
-        <div className={ this.className('budget') } onClick={() => this.navigate('budget')}>
+        </a>
+        <a href="#" className={ this.className('budget') } onClick={() => this.navigate('budget')}>
           <FontIcon iconStyle={ {fontSize: '32px' }} className="material-icons">credit_card</FontIcon>
-        </div>
+        </a>
       </div>
     );
   }
 };
-
-
 
 Menu.childContextTypes = {
   muiTheme: React.PropTypes.object
