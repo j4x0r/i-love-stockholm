@@ -20,7 +20,7 @@ export default class ArticleList extends React.Component {
   onExpand(id) {
     console.log("EXPAND")
     this.setState({expandedArticleId: id});
-    location.href = `#article-${id}`
+    //location.href = `#article-${id}`
   }
 
   className(article) {

@@ -32,7 +32,7 @@ export default class Total extends React.Component {
     return (
       <div className="total">
         <h1 className="total-title">
-          {this.props.total}/<small>5.000 SEK</small>
+          {this.props.total}/<small>{this.props.limit} SEK</small>
         </h1>
         <div className="progress">
           <div  style={{width: `${perc}%`}} className="progress__bar" />
